@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: cucumber.Options.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 41.408 s <<< FAILURE! - in cucumber.Options.TestRunner
+Check the borrowing estimate based on income and expenses #1(Testing the borrowing calculator)  Time elapsed: 14.325 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<$4[82],000> but was:<$4[26],000>
+
+Verify register station API without API Key throws error negative test(Validating Weather Station APIs)  Time elapsed: 3.901 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "{\"code\": 401,\"message\": \"Invalid API key. Please see http://openweathermap.org/faq#error401 for more info.\"}"
+  Actual: {"cod":401, "message": "Invalid API key. Please see https://openweathermap.org/faq#error401 for more info."}
+
+

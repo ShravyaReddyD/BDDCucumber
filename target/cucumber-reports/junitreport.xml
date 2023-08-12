@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="38.377" tests="8" skipped="0" failures="2" errors="0">
+<testcase classname="Testing the borrowing calculator" name="Check the borrowing estimate based on income and expenses - Example #1.1" time="14.215">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;$4[82],000&gt; but was:&lt;$4[26],000&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<$4[82],000> but was:<$4[26],000>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.calculatorSteps.the_borrowing_estimate_should_be_as_expected(calculatorSteps.java:53)
+	at ?.the borrowing estimate should be as expected(file:///C:/Users/shravyad/eclipse-workspace/CucumberFramework/src/test/java/features/borrowingEstimate.feature:7)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user navigates to the calculator page.................................passed
+When user enters 80000,10000,500,0,100,0 and 10000..........................passed
+And clicks on the borrow estimate button....................................passed
+Then the borrowing estimate should be as expected...........................failed
+And clicking the start over button should clear the form....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Testing the borrowing calculator" name="Check the borrowing estimate based on income and expenses - Example #1.2" time="14.611">
+<system-out><![CDATA[
+Given user navigates to the calculator page.................................passed
+When user enters 80000,21000,500,0,50,0 and 10000...........................passed
+And clicks on the borrow estimate button....................................passed
+Then the borrowing estimate should be as expected...........................passed
+And clicking the start over button should clear the form....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating Weather Station APIs" name="Verify register station API without API Key throws error negative test" time="3.879">
+<failure type="java.lang.AssertionError" message="1 expectation failed.
+Response body doesn't match expectation.
+Expected: &quot;{\&quot;code\&quot;: 401,\&quot;message\&quot;: \&quot;Invalid API key. Please see http://openweathermap.org/faq#error401 for more info.\&quot;}&quot;
+  Actual: {&quot;cod&quot;:401, &quot;message&quot;: &quot;Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.&quot;}
+">
+<![CDATA[java.lang.AssertionError: 1 expectation failed.
+Response body doesn't match expectation.
+Expected: "{\"code\": 401,\"message\": \"Invalid API key. Please see http://openweathermap.org/faq#error401 for more info.\"}"
+  Actual: {"cod":401, "message": "Invalid API key. Please see https://openweathermap.org/faq#error401 for more info."}
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:107)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at stepDefinitions.weatherStationSteps.the_test_fail_to_match_the_expected_message(weatherStationSteps.java:47)
+	at ?.the test fail to match the expected message(file:///C:/Users/shravyad/eclipse-workspace/CucumberFramework/src/test/java/features/weatherMap.feature:7)
+]]>
+</failure>
+<system-out><![CDATA[
+Given weather station API endpoint..........................................passed
+When user calls registerStationAPI with post http request...................passed
+Then the API call should give status code 401...............................passed
+And the test fail to match the expected message.............................failed
+]]></system-out>
+</testcase>
+<testcase classname="Validating Weather Station APIs" name="Verify register station API without API Key throws error" time="0.523">
+<system-out><![CDATA[
+Given weather station API endpoint..........................................passed
+When user calls registerStationAPI with post http request...................passed
+Then the API call should give status code 401...............................passed
+And the response message body should match the expected message.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating Weather Station APIs" name="Register two weather stations - Example #1.1" time="0.922">
+<system-out><![CDATA[
+Given weather station API endpoint..........................................passed
+When a request is made to register a weather station with details DEMO_TEST001,Team Demo Test Station 001,33.33,-122.43 and 222.passed
+Then the API call should give status code 201...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating Weather Station APIs" name="Register two weather stations - Example #1.2" time="0.91">
+<system-out><![CDATA[
+Given weather station API endpoint..........................................passed
+When a request is made to register a weather station with details DEMO_TEST002,Team Demo Test Station 002,44.44,-122.44 and 111.passed
+Then the API call should give status code 201...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating Weather Station APIs" name="Get the details of registered stations - Example #1.1" time="2.015">
+<system-out><![CDATA[
+Given weather station API endpoint..........................................passed
+When a rquest is made to get all the registered stations....................passed
+Then the API call should give status code 200...............................passed
+And the response should get the same details sent in registration request DEMO_TEST001 and Team Demo Test Station 001.passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating Weather Station APIs" name="Get the details of registered stations - Example #1.2" time="0.929">
+<system-out><![CDATA[
+Given weather station API endpoint..........................................passed
+When a rquest is made to get all the registered stations....................passed
+Then the API call should give status code 200...............................passed
+And the response should get the same details sent in registration request DEMO_TEST002 and Team Demo Test Station 002.passed
+]]></system-out>
+</testcase>
+</testsuite>
